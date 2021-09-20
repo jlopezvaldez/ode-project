@@ -1,4 +1,4 @@
-
+#made by jonathan lopez 09/19/2021
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.integrate import odeint
@@ -27,12 +27,14 @@ y4 = odeint(model,y0,t,args=(k,))
 
 # y = odeint(model,y0,t)
 
+# each different plot for
 plt.plot(t,y1, 'r-', linewidth = 2, label='k=0.50')
 plt.plot(t,y2, 'b--', linewidth = 2, label='k=0.75')
 plt.plot(t,y3, 'g:', linewidth = 2, label='k=0.90')
 plt.plot(t,y4, 'k+', linewidth = 2, label='k=0.95')
 
-plt.xticks(np.arange(min(t), max(t)+2, 15))
+# this changes the ticks within the plot
+# plt.xticks(np.arange(min(t), max(t)+2, 15))
 
 plt.xlabel('Number of Processors n')
 plt.ylabel('Speedup Time')
